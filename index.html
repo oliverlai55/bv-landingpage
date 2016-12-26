@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="google-site-verification" content="VZZGPRY83YYAsGIDQuetAU3p7QvtcbbkEBD9RhdM6UE" />
+    <meta name="msvalidate.01" content="80A8CCCEE696E6B91D8EBC775D86A54A" />
+
+    <title>Online Background Checks | BeenVerified</title>
+    <meta name="description" content="Find people online! Search for people by name, phone number, address and email. BeenVerified is your ultimate background check answer.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- If user is logged in, do this -->
+  <script type="text/javascript">
+        function createCookie(name,value,days){if(days){var date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));var expires="; expires="+date.toGMTString();}
+        else var expires="";document.cookie=name+"="+value+expires+"; path=/";}
+        function readCookie(name){var nameEQ=name+"=";var ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1,c.length);if(c.indexOf(nameEQ)==0)return c.substring(nameEQ.length,c.length);}
+        return null;}
+        function eraseCookie(name){createCookie(name,"",-1);}
+
+        if (readCookie('loggedin')=='true'){
+            window.location='/accounts';
+        }
+  </script>
+
+  <script type="application/ld+json">
+          { "@context" : "http://schema.org",
+            "@type" : "Organization",
+             "name" : "BeenVerified",
+             "alternateName" : "BeenVerified.com",
+             "url" : "https://www.beenverified.com/",
+             "logo" : "https://www.beenverified.com/blog/wp-content/uploads/2015/03/beenverified.png",
+             "contactPoint" : [
+                  { "@type" : "ContactPoint",
+                              "telephone" : "+1-888-579-5910",
+                              "contactType" : "customer service",
+                              "contactOption" : "TollFree",
+                              "areaServed" : "US" } ] ,
+             "sameAs" : [ "https://www.facebook.com/BeenVerified",
+                          "https://plus.google.com/+beenverified",
+                          "https://twitter.com/beenverified",
+                          "https://www.linkedin.com/company/beenverified-com",
+                          "https://en.wikipedia.org/wiki/BeenVerified",
+                          "https://www.wikidata.org/wiki/Q16243673" ]
+          }
+  </script>
+
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!-- Video Modal
+--------------------------------------------------------------------->
+<div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">BeenVerified.com</h4>
+        </div>
+        <div class="modal-body">
+            <iframe src="https://www.youtube.com/embed/Kx1_38Bs4Us" allowfullscreen="" frameborder="0" height="315" width="100%"></iframe>
+        </div>
+    </div>
+  </div>
+</div>
+
+<header id="header">
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <span class="navbar-brand">
+                <div class="navbar-logo">
+                </div>
+            </span>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <p class="nav-phone text-center">Questions? 1-888-579-5910</p>
+              </li>
+              <li class="nav-btn">
+                <a href="//www.beenverified.com/login" class="btn btn-block btn-login">Log In</a>
+              </li>
+              <li class="nav-btn">
+                <a href="//www.beenverified.com/lp/32fc4f/4/subscribe" class="btn btn-block btn-register">Sign Up</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="home-search">
+    <div class="container">
+      <div class="box-header">
+        <div class="col-xs-12 text-center"data-bv-content>
+			<div class="box-header" data-bv-ref="default">
+                <!-- <h1>Find Criminal Records, Background Checks, Contact Information, and More!</h1> -->
+                <h1>Search Public Records</h1>
+                <p class="hidden-xs">Find Criminal Records, Background Checks, Contact Information, and More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="publicrecords">
+                <h1>Search Public Records</h1>
+                <p class="hidden-xs">Find Criminal Records, Background Checks, Contact Information, and More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="criminalrecords">
+                <h1>Search Criminal Records</h1>
+                <p class="hidden-xs">Uncover Felonies, Misdemeanors, Arrests, and Traffic Violations!</p>
+            </div>
+            <div class="box-header" data-bv-ref="arrestrecords">
+                <h1>Search Arrest Records</h1>
+                <p class="hidden-xs">Uncover Felonies, Misdemeanors, Arrests, and Traffic Violations!</p>
+            </div>
+            <div class="box-header" data-bv-ref="trafficrecords">
+                <h1>Search Traffic Records</h1>
+                <p class="hidden-xs">Find Criminal Records, Background Checks, Contact Information, and More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="backgroundchecks">
+                <h1>Search Background Checks</h1>
+                <p class="hidden-xs">Find Criminal Records, Bankruptcies, Contact Information, and More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="peoplesearch">
+                <h1>People Search</h1>
+                <p class="hidden-xs">Find Criminal Records, Background Checks, Contact Information, and More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="courtrecords">
+                <h1>Search Court Records</h1>
+                <p class="hidden-xs">Find Public Records, Background Checks, Contact Information, and More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="policerecords">
+                <h1>Search Police Records</h1>
+                <p class="hidden-xs">Find Criminal Records, Traffic Violations, Contact Information, and More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="bankruptcyrecords">
+                <h1>Search Bankruptcy Records</h1>
+                <p class="hidden-xs">Tax Liens, Judgments, Court Records and More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="liens">
+                <h1>Search Tax Liens</h1>
+                <p class="hidden-xs">Bankruptcies, Liens, Judgments, Court Records and More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="propertyrecords">
+                <h1>Search Property Records</h1>
+                <p class="hidden-xs">Find Public Records, Background Checks, Contact Information, and More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="socialmedia">
+                <h1>Search Social Media Profiles</h1>
+                <p class="hidden-xs">Find Pictures, Accounts, Contact Information, and More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="relatives">
+                <h1>Search for Relatives</h1>
+                <p class="hidden-xs">Find Relatives, Associates, Neighbors, and Much More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="phone">
+                <h1>Who's Calling or Texting?</h1>
+                <p class="hidden-xs">Cheaters beware! Discover who your partner may be texting.</p>
+            </div>
+            <div class="box-header" data-bv-ref="cheating">
+                <h1>Is He Cheating?</h1>
+                <p class="hidden-xs">Cheaters beware! Find Out Who He May Be Cheating With.</p>
+            </div>
+            <div class="box-header" data-bv-ref="highschool">
+                <h1>Find Lost Friends!</h1>
+                <p class="hidden-xs">Search Addresses, Phone Numbers, Social Profiles and More.</p>
+            </div>
+            <div class="box-header" data-bv-ref="affair">
+                <h1>Do You Think He's Having an Affair?</h1>
+                <p class="hidden-xs">Search Addresses, Phone Numbers, Social Profiles and More.</p>
+            </div>
+            <div class="box-header" data-bv-ref="careerrecords">
+                <h1>Search Career Records</h1>
+                <p class="hidden-xs">Find education records, job records, criminal history and more!</p>
+            </div>
+            <div class="box-header" data-bv-ref="checkyourrecord">
+                <h1>Search Your Own Record</h1>
+                <p class="hidden-xs">Find Public Records, Criminal Records, Social Profiles and More!</p>
+            </div>
+            <div class="box-header" data-bv-ref="countyassessor">
+                <h1>Search County Assessor Records</h1>
+                <p class="hidden-xs">Search Addresses, Deeds, Contact Information and More.</p>
+            </div>
+            <div class="box-header" data-bv-ref="currentaddress">
+                <h1>Search for a Current Address</h1>
+                <p class="hidden-xs">Search Addresses, Phone Numbers, Emails and More.</p>
+            </div>
+                      <div class="box-header" data-bv-ref="reverseemail">
+                <h1>Reverse Email Search</h1>
+                <p class="hidden-xs">Select "Email" to search any email address.</p>
+            </div>
+                      <div class="box-header" data-bv-ref="emaildomains">
+                <h1>Email Records Search</h1>
+                <p class="hidden-xs">Find email addresses, phone numbers, social profiles and more.</p>
+            </div>
+        </div> <!--data-bv-content-->
+      </div>
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <div id="home-search-carousel" class="search-form carousel slide" data-interval="false">
+            <div class="header-cta hidden-xs">
+              <div class="header-cta-inside">
+                <!--<span class="visible-xs">Start Searching Today!</span>-->
+                <span class="searchbar-text searchbar-content hidden-xs hidden">Start Here - Try searching a friend, relative, date, neighbor or even yourself.</span>
+                <span class="progress-yellow-text progressbar-content hidden-xs">Preparing public records search</span>
+                <span class="carrot-cta2 progressbar-content"></span>
+                <!-- <span class="carrot-cta"></span> -->
+              </div>
+            </div>
+            <div class="progressbar-content"><p class="mobile-progress-content">Preparing public records search</p></div>
+              <div class="row">
+                  <div class="col-sm-8">
+                    <div class="progressbar-wrapper progressbar-content">
+                      <div id="progressbar">
+                        <div id="percent-text">100%</div>
+                      </div>
+                    </div>
+                      <div class="home-carousel-wrapper searchbar-content hidden">
+                          <div class="home-carousel-indicator-wrapper">
+                              <a href="#" id="search-type-people" class="home-carousel-indicator carousel-indicator-people active" data-target="#home-search-carousel" data-slide-to="0">People
+                              <span class="carrot-cta hidden"></span>
+                             </a>
+                         </div>
+                          <div class="home-carousel-indicator-wrapper">
+                              <a href="#" id="search-type-phone" class="home-carousel-indicator carousel-indicator-phone" data-target="#home-search-carousel" data-slide-to="1">Phone
+                              <span class="carrot-cta hidden"></span>
+                              </a>
+                          </div>
+                          <div class="home-carousel-indicator-wrapper">
+                              <a href="#" id="search-type-email" class="home-carousel-indicator carousel-indicator-email" data-target="#home-search-carousel" data-slide-to="2">Email
+                              <span class="carrot-cta hidden"></span>
+                              </a>
+                          </div>
+                          <div class="home-carousel-indicator-wrapper">
+                              <a href="#" id="search-type-property" class="home-carousel-indicator carousel-indicator-property" data-target="#home-search-carousel" data-slide-to="3">Property
+                              <span class="carrot-cta hidden"></span>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-4 text-right privacy searchbar-content hidden hidden-xs"> <img src="img/lock.png" /> <span> We respect your privacy.</span> </div>
+              </div>
+
+              <div class="carousel-inner searchbar-content hidden">
+                  <!-- Names Search -->
+                  <div class="item active">
+                      <form action="<%= next_page %>" id="header-search-people" class="header-search">
+                          <div class="row">
+                              <div class="col-sm-9 col-no-padding">
+                                  <div class="field-group">
+                                      <div class="row">
+                                          <div class="col-sm-4 no-pad-right">
+                                              <label class="cross-browser" for="fn">First Name</label>
+                                              <input type="text" name="fn" placeholder="First Name" id="fn" class="form-control first-input focus-me">
+                                              <!--<label for="fn" class="error"></label>-->
+                                          </div>
+                                          <div class="col-sm-4 no-pad-left no-pad-right">
+                                              <label class="cross-browser" for="ln">Last Name</label>
+                                              <input type="text" name="ln" placeholder="Last Name" id="ln" class="form-control "/>
+                                              <!--<label for="ln" class="error"></label>-->
+                                          </div>
+                                          <div class="col-sm-4 no-pad-left no-pad-right">
+                                              <label class="cross-browser" for="state">State</label>
+                                              <select name="state" class="form-control">
+                                                  <option value="All">All States</option>
+                                                  <option value="AL">Alabama</option>
+                                                  <option value="AK">Alaska</option>
+                                                  <option value="AZ">Arizona</option>
+                                                  <option value="AR">Arkansas</option>
+                                                  <option value="CA">California</option>
+                                                  <option value="CO">Colorado</option>
+                                                  <option value="CT">Connecticut</option>
+                                                  <option value="DE">Delaware</option>
+                                                  <option value="DC">District Of Columbia</option>
+                                                  <option value="FL">Florida</option>
+                                                  <option value="GA">Georgia</option>
+                                                  <option value="HI">Hawaii</option>
+                                                  <option value="ID">Idaho</option>
+                                                  <option value="IL">Illinois</option>
+                                                  <option value="IN">Indiana</option>
+                                                  <option value="IA">Iowa</option>
+                                                  <option value="KS">Kansas</option>
+                                                  <option value="KY">Kentucky</option>
+                                                  <option value="LA">Louisiana</option>
+                                                  <option value="ME">Maine</option>
+                                                  <option value="MD">Maryland</option>
+                                                  <option value="MA">Massachusetts</option>
+                                                  <option value="MI">Michigan</option>
+                                                  <option value="MN">Minnesota</option>
+                                                  <option value="MS">Mississippi</option>
+                                                  <option value="MO">Missouri</option>
+                                                  <option value="MT">Montana</option>
+                                                  <option value="NE">Nebraska</option>
+                                                  <option value="NV">Nevada</option>
+                                                  <option value="NH">New Hampshire</option>
+                                                  <option value="NJ">New Jersey</option>
+                                                  <option value="NM">New Mexico</option>
+                                                  <option value="NY">New York</option>
+                                                  <option value="NC">North Carolina</option>
+                                                  <option value="ND">North Dakota</option>
+                                                  <option value="OH">Ohio</option>
+                                                  <option value="OK">Oklahoma</option>
+                                                  <option value="OR">Oregon</option>
+                                                  <option value="PA">Pennsylvania</option>
+                                                  <option value="RI">Rhode Island</option>
+                                                  <option value="SC">South Carolina</option>
+                                                  <option value="SD">South Dakota</option>
+                                                  <option value="TN">Tennessee</option>
+                                                  <option value="TX">Texas</option>
+                                                  <option value="UT">Utah</option>
+                                                  <option value="VT">Vermont</option>
+                                                  <option value="VA">Virginia</option>
+                                                  <option value="WA">Washington</option>
+                                                  <option value="WV">West Virginia</option>
+                                                  <option value="WI">Wisconsin</option>
+                                                  <option value="WY">Wyoming</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-3 no-pad-left">
+                                  <label class="cross-browser">&nbsp;</label>
+                                  <button class="btn btn-block btn-success btn-search" type="submit">Search</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+
+                  <!-- Phone Search -->
+                  <div class="item">
+                      <!-- Previous link https://www.beenverified.com/reverse-phone-search -->
+                      <form action="https://www.beenverified.com/lp/b64c23/1/search-results" id="header-search-phone" class="header-search" role="form" method="get" name="record_search_form">
+                          <div class="row">
+                              <div class="col-sm-9 no-pad-right">
+                                  <label class="cross-browser" for="phone">Phone Number</label>
+                                  <input type="tel" maxlength="16" name="phone" placeholder="Enter Phone Number" id="phone" class="form-control first-input">
+                                  <!--<label for="phone" class="error"></label>-->
+                              </div>
+                              <div class="col-sm-3 no-pad-left">
+                                  <label class="cross-browser">&nbsp;</label>
+                                  <button class="btn btn-block btn-success btn-search" type="submit">Search</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+
+                  <!-- Email Search -->
+                  <div class="item">
+                    <form action="https://www.beenverified.com/lp/34f493/2/loading" id="header-search-email" class="header-search" role="form" method="get" name="email_search">
+                        <div class="row">
+                            <div class="col-sm-9 col-no-padding no-pad-right">
+                                <label class="cross-browser" for="emailaddress">Email Address</label>
+                                <input type="email" name="emailaddress" placeholder="Enter Email Address" id="emailaddress" class="form-control first-input">
+                                <!--<label for="emailaddress" class="error"></label>-->
+                            </div>
+                            <div class="col-sm-3 no-pad-left">
+                                <label class="cross-browser">&nbsp;</label>
+                                <button class="btn btn-block btn-success btn-search" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+
+                  <!-- Property Search -->
+                  <div class="item">
+                    <form action="https://www.beenverified.com/lp/411a69/2/loading" id="header-search-property" class="header-search" role="form" method="get" name="property_search">
+                        <div class="row">
+                            <div class="col-sm-9 no-pad-right">
+                                <label class="cross-browser" for="fullAddress">Street Address</label>
+                                <input type="text" name="address" placeholder="Enter Address" id="fullAddress" class="form-control first-input" required="required">
+                                <!--<label for="address" class="error"></label>-->
+                            </div>
+                            <div class="col-sm-3 no-pad-left">
+                                <label class="cross-browser">&nbsp;</label>
+                                <button class="btn btn-block btn-success btn-search" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+              </div>
+           <!--
+            <p class="pro-search"><img src="img/ktc.png">&nbsp;&nbsp;<a href="https://www.knowthycustomer.com/" target="_blank">Are you a business user? <span>Try our <strong>Pro Search.</strong></span></a></p>
+-->
+
+          </div>
+          <div class="logos text-center
+           hidden-xs">
+              <img src="img/press.png" align="advertisement" class=""/>
+          </div>
+        </div>
+      </div>
+      <div id="counter" class="center-block text-center">
+              <span class="counter-number text-center timer-wrapper">
+                  <span class="timer-digit-group">
+                      <span id="tick_0" class="timer-digit-single">4</span><span id="tick_1" class="timer-digit-single">7</span><span class="timer-digit-single">,</span><span id="tick_2" class="timer-digit-single">2</span><span id="tick_3" class="timer-digit-single">8</span><span id="tick_4" class="timer-digit-single">1</span><span class="timer-digit-single">,</span><span id="tick_5" class="timer-digit-single">5</span><span id="tick_6" class="timer-digit-single">6</span><span id="tick_7" class="timer-digit-single">2</span>
+                  </span><!-- /.timer-digit-group -->
+              </span> <!-- /.timer-wrapper -->
+          <span class="counter-text text-center">Successful People Reports</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!--
+<section id="background-checks">
+    <div class="container">
+        <div class="box-header">
+          <h2 class="huge">Easy and Affordable Background Checks</h2>
+          <p class="hidden-xs">Learn why millions of people like you have chosen BeenVerified</p>
+        </div>
+        <div class="box-contents">
+          <div class="row">
+            <div class="col-sm-7 col-md-5">
+                <div class="row">
+                    <div class="col-xs-8 col-sm-12 screenshot-small-wrapper">
+                        <h2>Unlimited Searches, Anytime</h2>
+                        <p>Looking for someone? Our intuitive public records search engine makes it easy. See our "<a href="//www.beenverified.com/about/dos-donts/">Do's and Don'ts</a>."</p>
+                        <h2>Affordable &amp; Accessible</h2>
+                        <p>We don't want you to ask yourself if it's "worth it" to run a search.</p>
+                        <h2>Respect For Privacy</h2>
+                        <p>A privacy-friendly public record search is not an oxymoron. <a href="//www.beenverified.com/faq/privacy/">Learn how we do it.</a></p>
+                        <h2>All Public Records in One Report</h2>
+                        <p>Search for what you are looking for and get all the data in one single report.</p>
+                    </div>
+                    <div class="visible-xs col-xs-4 screenshot-small-wrapper">
+                        <img src="img/screenshot-small2.png" alt="" class="screenshot-small"/>
+                    </div>
+                </div>
+
+                <a href="//www.beenverified.com/about/bv-vs-comp/" class="btn btn-block btn-default btn-basic">Learn About Us</a>
+            </div>
+            <div class="col-sm-5 col-md-6 col-md-offset-1 hidden-xs text-center">
+                <img src="img/screenshot2.png" class="img-responsive screenshot-opt" alt="" />
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+-->
+
+<!--
+<section id="app">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-push-6">
+                <div class="box-header">
+                    <h2 class="huge">Billions of Records at Your Fingertips</h2>
+                </div>
+                <div class="box-contents">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p> With over 7,000,000 downloads so far, BeenVerified is the go-to choice for mobile public data access. </p>
+                            <div class="app-review-wrapper">
+                                <p>"Great App"&nbsp;&nbsp; <img src="img/app-rating.png" alt=""> </p>
+                                <p class="small">"BeenVerified is easy to use and provides the details needed for a reliable, accurate background check. Highly recommend!”
+                                    <span class="text-muted">- via the App Store</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row app-btn-wrapper">
+                        <div class="col-sm-6">
+                            <a href="https://itunes.apple.com/us/app/background-check-app/id342585873" class="app-button app-apple"><img src="img/app-apple.png" class="center-block img-responsive" /></a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="https://play.google.com/store/apps/details?id=com.beenverified.android" class="app-button app-google"><img src="img/app-google.png" class="center-block img-responsive" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-sm-pull-6 text-center">
+                <img src="img/app-bundle.png" alt="" class="app-bundle-img img-responsive center-block">
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+<!--
+<section id="testimonials" class="testimonials-container">
+  <div class=" container">
+    <div class="box-header">
+      <h2 class="huge">Experience the BeenVerified Difference</h2>
+      <p class="hidden-xs">See what people like you are saying about BeenVerified</p>
+    </div>
+    <div class="box-contents">
+      <div class="row">
+        <div class="col-sm-6 col-md-5">
+            <div id="carousel-testimonials" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <h2>Natasha, OK</h2>
+                        <h3>Nursing Student</h3>
+                        <div class="testi-contents testi-1">"My daughter recently went out for soccer. I decided it would be a good idea to run another player’s father through BeenVerified. Turns out this guy had been charged with indecent exposure and was on parole."</div>
+                    </div>
+                    <div class="item">
+                        <h2>Maryann, NJ</h2>
+                        <h3>Analyst</h3>
+                        <div class="testi-contents testi-2">"I used BeenVerified to check into a guy that I had met online. It turns out he had lied to me about where he lived and his family. Needless to say, thanks to BV I severed contact with him and have not heard from him since. Thank you BV!"</div>
+                    </div>
+                    <div class="item">
+                        <h2>Bob M, NJ</h2>
+                        <h3>Retired Detective</h3>
+                        <div class="testi-contents testi-3">"I am retired and have a ministry helping the dying and sick. I found a son and the mother was dying of cancer. She held on waiting for her son who had not been in touch for years."</div>
+                    </div>
+                    <div class="item">
+                        <h2>Rhonda, MO</h2>
+                        <h3>Caring Mom</h3>
+                        <div class="testi-contents testi-4">"I'm a single mother dating online and I use BeenVerified to help protect my family!"</div>
+                    </div>
+                </div>
+                <ul class="list-inline">
+                  <li data-target="#carousel-testimonials" data-slide-to="0" class="testimonial-photo active"><img src="img/testimonial-nat.png" /></li>
+                  <li data-target="#carousel-testimonials" data-slide-to="1" class="testimonial-photo"><img src="img/testimonial-mar.png" /></li>
+                  <li data-target="#carousel-testimonials" data-slide-to="2" class="testimonial-photo"><img src="img/testimonial-bob.png" /></li>
+                  <li data-target="#carousel-testimonials" data-slide-to="3" class="testimonial-photo"><img src="img/testimonial-rho.png" /></li>
+                </ul>
+            </div>
+          <a href="//www.beenverified.com/about/testimonials/" class="btn btn-default btn-block btn-basic">More Testimonials</a>
+        </div>
+        <div class="col-sm-6 col-md-5 col-md-offset-2 hidden-xs">
+            <div id="carousel-press" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <h2>From the Press</h2>
+                        <h3>Gizmodo.com</h3>
+                        <div class="testi-contents press-1">"It found my photos on Flickr, my Amazon wishlist, my public Foursquare records, Vimeo, Picassa, and Stumbleupon accounts. It grabbed approximately twelve bajillion photos of me (with many, many false positives) and even more web links."</div>
+                    </div>
+                    <div class="item">
+                        <h2>From the Press</h2>
+                        <h3>U.S. News &amp; World Report</h3>
+                        <div class="testi-contents press-2">"BeenVerified easily and inexpensively provides access to public records information through its website and several mobile phone applications. No longer are large corporations the only ones who can afford background checks."</div>
+                    </div>
+                    <div class="item">
+                        <h2>From the Press</h2>
+                        <h3>NBC 6 Miami</h3>
+                        <div class="testi-contents press-3">"Instant information… Court documents, mortgage deeds, criminal records right in the palm of your hand."</div>
+                    </div>
+                </div>
+                <ul class="list-inline">
+                  <li data-target="#carousel-press" data-slide-to="0" class="testi-press active"><img src="img/testimonial-gizmodo.png" /></li>
+                  <li data-target="#carousel-press" data-slide-to="1" class="testi-press"><img src="img/testimonial-usnews.png" /></li>
+                  <li data-target="#carousel-press" data-slide-to="2" class="testi-press"><img src="img/testimonial-6miami.png" /></li>
+                </ul>
+            </div>
+          <a href="//www.beenverified.com/press/" class="btn btn-default btn-block btn-basic">More Press Quotes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!--
+<section id="video" class="video-container">
+    <div class="container">
+        <div class="text-center">
+            <a href="#" data-toggle="modal" data-target="#video-modal" data-theVideo="https://www.youtube.com/embed/Kx1_38Bs4Us">
+                <img class="video-play-btn" src="img/video-play2.png" />
+            </a>
+            <a href="#" data-toggle="modal" class="btn btn-default btn-block btn-basic center-block" data-target="#video-modal" data-theVideo="https://www.youtube.com/embed/Kx1_38Bs4Us">Our 60 Second Video</a>
+        </div>
+    </div>
+</section>
+-->
+
+<!--
+<section id="timeline">
+  <div class="container">
+    <div class="box-header">
+      <h2 class="huge">Who is BeenVerified?</h2>
+      <p>The story of how we became the leader in online public records</p>
+    </div>
+    <div class="box-contents">
+      <div class="graph-line hidden-xs text-center">
+          <img src="img/graph-line.png" class="img-responsive"/>
+      </div>
+      <div class="graph-vert visible-xs text-left">
+          <img src="img/graph-vert.png"/>
+      </div>
+      <div class="graph-dots">
+        <div class="row">
+          <div class="col-sm-3 text-center">
+            <p class="timeline-box">
+                <img src="img/graph-dot.png" class="center-block" />
+                <span class="timeline-text">Founded by Josh Levy and Ross Cohen in 2007</span>
+            </p>
+          </div>
+          <div class="col-sm-3 text-center">
+             <p class="timeline-box">
+                 <img src="img/graph-dot.png" class="center-block" />
+                 <span class="timeline-text">In 2008, we moved to New York and launched our first television ads</span>
+             </p>
+          </div>
+          <div class="col-sm-3 text-center">
+             <p class="timeline-box">
+                 <img src="img/graph-dot.png" class="center-block" />
+                 <span class="timeline-text">Named fastest growing private company in NYC by Inc. Magazine in 2013</span>
+             </p>
+          </div>
+          <div class="col-sm-3 text-center">
+             <p class="timeline-box">
+                 <img src="img/graph-dot.png" class="center-block" />
+                 <span class="timeline-text">Today, our apps have been downloaded 7,000,000 times and we've run 40,000,000 background reports</span>
+             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!--
+<section id="cta">
+  <p class="text-center"> <span>What are you waiting for?</span><a href="#" class="btn btn-success btn-basic backToTop">Search Someone</a></p>
+</section>
+-->
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+        <div class="customer-service-wrapper col-sm-6 col-sm-offset-3 col-lg-4 col-lg-push-8 col-lg-offset-0">
+          <div>
+            <h4>“Excellent Support &amp; Service”</h4>
+            <div class="row">
+              <div class="col-lg-4"> <img src="img/footer-rating.png"> </div>
+              <div class="col-lg-6">
+                <p class="website">- via SiteJabber.com</p>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                        <span class="phone-number"><a href="tel:+1-888-579-5910">1-888-579-5910</a></span>
+                        <br/>
+                        <span class="email-address">
+                            <a href="mailto:support@beenverified.com">support@beenverified.com</a>
+                        </span>
+                        <br/>
+                        Monday - Friday	8 am - 10 pm est
+                        <br/>
+                        Saturday - Sunday	10 am - 8 pm est
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-10 border-bottom">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <p >"Our goal is to be quick and as helpful as possible."</p>
+                  </div>
+                  <div class="col-xs-4"> <img src="img/director.png" class="pull-right"> </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-10 text-right">
+                <p><span class="phone-number">Carla</span><br />
+                  <i>Director of Customer Care</i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-lg-pull-4 xs-center">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="//www.beenverified.com/about/">About BV</a></li>
+                        <li><a href="//www.beenverified.com/about/testimonials/">Testimonials</a></li>
+                        <li><a href="//www.beenverified.com/careers/">Careers</a></li>
+                        <li><a href="//www.beenverified.com/about/leadership/">Leadership</a></li>
+                        <li><a href="//www.beenverified.com/press/">Press</a></li>
+                        <li><a href="//www.beenverified.com/people/">People White Pages</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Our Apps</h4>
+                    <ul>
+                        <li><a href="//www.beenverified.com/apps/">All BV Apps</a></li>
+                        <li><a href="//www.beenverified.com/apps/ios/">For iPhone / iPad</a> - <a href="https://itunes.apple.com/us/app/background-check-app/id342585873?mt=8">Download</a></li>
+                        <li><a href="//www.beenverified.com/apps/apple-watch/">For Apple Watch</a> - <a href="https://itunes.apple.com/us/app/background-check-app-beenverified/id342585873?mt=8">Download</a></li>
+                        <li><a href="//www.beenverified.com/apps/android/">For Android</a> - <a href="https://market.android.com/details?id=com.beenverified.android&feature=search_result">Download</a></li>
+                        <li><a href="https://docs.google.com/a/beenverified.com/spreadsheet/viewform?formkey=dEU1elc5dDVoMElwYmlYUWQ0Wkxjbmc6MA">Developer API</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="http://support.beenverified.com/home">Support</a></li>
+                        <li><a href="//www.beenverified.com/contact/">Contact Us</a></li>
+                        <li><a href="//www.beenverified.com/about/dos-donts/">Do's &amp; Don'ts</a></li>
+                        <li><a href="//www.beenverified.com/faq/billing/">FAQ</a></li>
+                        <li><a href="//www.beenverified.com/faq/opt-out/">Remove My Info</a></li>
+                        <li><a href="//www.beenverified.com/affiliates/">Affiliates</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row social-links">
+                <div class="col-xs-2">
+                    <a href="//twitter.com/beenverified">
+                        <img src="img/tw-ico.png" class="">
+                        <span class="hidden-xs">Twitter</span>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="//www.facebook.com/BeenVerified">
+                        <img src="img/fb-ico.png" class="">
+                        <span class="hidden-xs">Facebook</span>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="//plus.google.com/+beenverified/posts">
+                        <img src="img/gplus-ico.png" class="">
+                        <span class="hidden-xs">Google+</span>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="//www.linkedin.com/company/beenverified-com">
+                        <img src="img/li-ico.png" class="">
+                        <span class="hidden-xs">LinkedIn</span>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="//www.pinterest.com/beenverified/">
+                        <img src="img/pin-ico.png" class="">
+                        <span class="hidden-xs">Pinterest</span>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="//www.beenverified.com/blog/">
+                        <img src="img/bv-ico.png" class="">
+                        <span class="hidden-xs">BV Blog</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="disclaimer">Disclaimer: BeenVerified’s mission is to give people easy and affordable access to public record information. BeenVerified does not provide private investigator services, and is not a consumer reporting agency as defined by the Fair Credit Report Act because the information provided by BeenVerified is not collected or provided, in whole or in part, for the purpose of furnishing consumer reports about those search subjects. For more information governing the permitted and prohibited uses of BeenVerified, please review our <a href="//www.beenverified.com/about/dos-donts/">“Do’s &amp; Don’ts”</a> and our <a href="//www.beenverified.com/faq/terms-conditions/">Terms &amp; Conditions</a>. </p>
+    <div class="row">
+        <div class="col-sm-6">
+            <p class="xs-center"><a href="//www.beenverified.com">BeenVerified</a> © 2015 All Rights Reserved </p>
+        </div>
+        <div class="col-sm-6 text-right xs-center">
+            <a href="//www.beenverified.com/faq/terms-conditions/">Terms &amp; Conditions</a> |
+            <a href="//www.beenverified.com/faq/privacy/">Privacy Policy</a>
+        </div>
+    </div>
+  </div>
+</footer>
+
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/lodash.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="js/amplify.store.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.liveaddress.js"></script>
+    <script type="text/javascript" src="js/counter.js"></script>
+    <script type="text/javascript" src="js/runner.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
